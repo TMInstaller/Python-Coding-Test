@@ -1,14 +1,15 @@
-# 유의사항: 웬만한 수 관련 반복문은 1부터 끝까지 돌릴 것
-def solution(left, right):
-    answer = 0
-    for i in range(left, right+1):
-        count = 0
-        for j in range(1, i+1):
-            if i % j == 0:
-                count += 1
-        if count % 2 == 0:
-            answer += i
-        else:
-            answer -= i
-        print(answer)
+# 유의사항: 별 것 아닌 것처럼 보이는 기능도 모두 넣는다 생각하고 풀 것
+def solution(s):
+    answer = True
+    s = list(s)
+    num = '0123456789'
+    if len(s) == 4 or len(s) == 6:
+        for i in s:
+            if i in num:
+                continue
+            else:
+                answer = False
+                break
+    else:
+        return False
     return answer
