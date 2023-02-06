@@ -11,5 +11,6 @@ def solution(numbers):
             if num in answer:
                 continue
             answer.append(num)
+    # 오름차순 정렬 후 출력
     answer.sort()
     return answer
